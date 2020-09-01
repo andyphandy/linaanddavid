@@ -1,0 +1,59 @@
+body {
+  font-family: Arial, sans-serif !important;
+}
+
+h1 {
+  font-size: 50px !important;
+}
+
+h1, h2, h3, h4, h5, h6, time {
+  font-family: 'Playfair Display', serif !important;
+}
+
+/* Header */
+.masthead {
+  height: 35vh;
+  min-height: 200px;
+}
+
+/* Navbar color */
+.active, .nav-link:hover {
+  color: gold !important;
+}
+
+/* Main img*/
+#main-img {
+  padding: 8px;
+  width: 100%;
+  max-width: 1080px;
+  height: auto;
+}
+
+/* Date */
+#date-msg {
+  font-size: 26px !important;
+}
+
+time {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.bg-pink {
+  background-color: rgb(255,244,224);
+}
+
+#footer-hr {
+  border: 2px solid darkgoldenrod;
+}
+
+@media screen and (max-width: 768px) {
+    nav.navbar {
+      position: fixed;
+      top: 0px;
+    }
+
+    #header {
+      margin-top: 80px !important;
+    }
+}
