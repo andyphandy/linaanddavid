@@ -5,22 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
 
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.statically.io/gh/kswedberg/jquery-smooth-scroll/3948290d/jquery.smooth-scroll.min.js"></script>
 
     <title>Lina & David</title>
   </head>
-  <body>
-    <header class="mb-4">
+  <body data-aos="fade-down">
+    <header>
       <div class="masthead d-flex flex-column text-center justify-content-center align-items-center" id="header">
-        <h1>LINA</h1>
-        <h1>&</h1>
-        <h1>DAVID</h1>
+        <h1>LINA & DAVID</h1>
       </div>
     </header>
 
-    <nav class="navbar navbar-expand-md w-100 bg-light navbar-light sticky-top mb-5">
+    <nav class="navbar navbar-expand-md w-100 bg-light navbar-light sticky-top mb-4">
       <div class="container d-flex justify-content-end">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBar">
           <span class="navbar-toggler-icon"></span>
@@ -54,12 +56,12 @@
       <section class="mb-5">
         <div class="container">
           <div class="row">
-            <div class="col-fluid mb-5 d-flex justify-content-center">
+            <div class="col-fluid mb-5 d-flex justify-content-center align-items-start">
               <img src="assets/proposal.jpg" alt="Proposal on one knee" class="border shadow" id="main-img">
             </div>
             <div class="col-fluid text-center">
               <h2 class="mb-3" id="date-msg">Please join us for our wedding celebration on</h2>
-              <time datetime="2022-02-01"><em>February 01, 2022</em></time>
+              <time datetime="2022-02-01"><em>February 19, 2022</em></time>
             </div>
           </div>
         </div>
@@ -99,5 +101,12 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script>
+      AOS.init({
+        duration: 1800,
+        once: true,
+      });
+    </script>
   </body>
 </html>

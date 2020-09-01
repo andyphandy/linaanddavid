@@ -12,8 +12,8 @@ h1, h2, h3, h4, h5, h6, time {
 
 /* Header */
 .masthead {
-  height: 35vh;
-  min-height: 200px;
+  height: 15vh;
+  min-height: 100px;
 }
 
 /* Navbar color */
