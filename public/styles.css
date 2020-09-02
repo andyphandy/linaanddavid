@@ -6,7 +6,7 @@ h1 {
   font-size: 50px !important;
 }
 
-h1, h2, h3, h4, h5, h6, time {
+h1, h2, h3, h4, h5, h6, time, nav, #location {
   font-family: 'Playfair Display', serif !important;
 }
 
@@ -16,8 +16,18 @@ h1, h2, h3, h4, h5, h6, time {
   min-height: 100px;
 }
 
+nav {
+  font-size: 18px;
+  font-weight: bold !important;
+}
+
+nav li {
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
 /* Navbar color */
-.active, .nav-link:hover {
+.active, .nav-link:hover, .gold {
   color: gold !important;
 }
 
@@ -30,22 +40,23 @@ h1, h2, h3, h4, h5, h6, time {
 }
 
 /* Date */
-#date-msg {
-  font-size: 26px !important;
+h2 {
+  font-size: 24px !important;
 }
 
-time {
+time, #location {
   font-size: 35px;
   font-weight: bold;
+}
+
+.gold-hr {
+  border: 2px solid goldenrod;
 }
 
 .bg-pink {
   background-color: rgb(255,244,224);
 }
 
-#footer-hr {
-  border: 2px solid darkgoldenrod;
-}
 
 .hidden {
   display: none;
