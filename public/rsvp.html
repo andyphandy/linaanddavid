@@ -71,10 +71,17 @@
                 </div>
                 <div class="row mb-3">
                   <div class="col">
+                    <label for="number">Number of guests* </label>
+                    <input type="number" class="form-control" id="number" min="0" max="100" value="0" required>
+                    <small id="helpNumber" class="form-text">
+                      Please put the names of your in-person guests in the textbox below.
+                    </small>
+                  </div>
+                  <div class="col">
                     <div class="form-check">
                       <input class="form-check-input" type="radio" name="rsvp" id="attend-person" value="yes-irl" required>
                       <label class="form-check-label" for="attend-person">
-                        I will attend in person
+                        I will attend in-person
                       </label>
                     </div>
                     <div class="form-check">
@@ -106,8 +113,18 @@
                 <div class="row mb-3">
                   <div class="col">
                     <div class="form-group">
-                      <label for="comments">Any questions, comments, or concerns? (Optional)</label>
+                      <label for="comments">Any questions, comments, or concerns?</label>
                       <textarea class="form-control" id="comments" rows="3"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col">
+                    <div class="alert alert-danger hidden" role="alert" id="number-error">
+                      Please put the number of guests (including you).
+                    </div>
+                    <div class="alert alert-danger hidden" role="alert" id="comment-error">
+                      Please put the names of your guests in the comment box.
                     </div>
                   </div>
                 </div>

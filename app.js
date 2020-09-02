@@ -36,10 +36,10 @@ app.get('/rsvp', function(req, res) {
 });
 
 app.post("/submitForm", async function(req, res) {
-  let { firstName, lastName, email, option, comments } = req.body;
+  let { firstName, lastName, email, option, comments, number } = req.body;
   let msg = createMsg(option);
   let subject = `${firstName} ${lastName} ${msg}`;
-  let text = `Their email is ${email}.`;
+  let text = `Their email is ${email}. They have ${number} guests attending IRL.`;
   if (comments) {
     text += `\n \n Here\'s what they said: \n ${comments}`;
   }

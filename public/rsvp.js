@@ -10,21 +10,34 @@
   }
 
   function submitForm() {
-    let params = new FormData();
-    params.append("firstName", id("first-name").value);
-    params.append("lastName", id("last-name").value);
-    params.append("email", id("email").value);
-    params.append("option", qs("input[name=\"rsvp\"]:checked").value);
-    params.append("comments", id("comments").value);
-    fetch("/submitForm", {method: "POST", body: params})
-      .then(checkStatus)
-      .then(() => {
-        id("rsvp").classList.add("hidden");
-        let success = id("msg");
-        success.textContent = "Successful! Thank you for RSVPing!";
-        success.classList.remove("hidden");
-      })
-      .catch(handleError);
+    let number = id("number").value;
+    let option = qs("input[name=\"rsvp\"]:checked").value;
+    let comments = id("comments").value;
+    if (number === "0" && option == "yes-irl") {
+      id("comment-error").classList.add("hidden");
+      id("number-error").classList.remove("hidden");
+    } else if (option == "yes-irl" && comments.trim() === "") {
+      id("comment-error").classList.remove("hidden");
+      id("number-error").classList.add("hidden");
+    }
+    else {
+      let params = new FormData();
+      params.append("firstName", id("first-name").value);
+      params.append("lastName", id("last-name").value);
+      params.append("email", id("email").value);
+      params.append("number", number);
+      params.append("option", option);
+      params.append("comments", comments);
+      fetch("/submitForm", {method: "POST", body: params})
+        .then(checkStatus)
+        .then(() => {
+          id("rsvp").classList.add("hidden");
+          let success = id("msg");
+          success.textContent = "Successful! Thank you for RSVPing!";
+          success.classList.remove("hidden");
+        })
+        .catch(handleError);
+    }
   }
 
     /**
