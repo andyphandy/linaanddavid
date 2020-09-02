@@ -27,10 +27,17 @@ const transporter = nodemailer.createTransport({
   }
 })
 
+app.get('/', function(req, res) {
+  res.sendFile(__dirname + "/public/index.html");
+});
+
+app.get('/rsvp', function(req, res) {
+  res.sendFile(__dirname + "/public/rsvp.html");
+});
+
 app.post("/submitForm", async function(req, res) {
   let { firstName, lastName, email, option, comments } = req.body;
   let msg = createMsg(option);
-  console.log(option)
   let subject = `${firstName} ${lastName} ${msg}`;
   let text = `Their email is ${email}.`;
   if (comments) {
@@ -45,7 +52,6 @@ app.post("/submitForm", async function(req, res) {
     })
     res.status(200).send(info);
   } catch (err) {
-    console.log(err);
     res.status(500).send(err);
   }
 });
