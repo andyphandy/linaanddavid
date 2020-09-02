@@ -47,6 +47,10 @@ time {
   border: 2px solid darkgoldenrod;
 }
 
+.hidden {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
     nav.navbar {
       position: fixed;
@@ -54,6 +58,6 @@ time {
     }
 
     #header {
-      margin-top: 80px !important;
+      margin-top: 60px !important;
     }
 }

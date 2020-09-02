@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.statically.io/gh/kswedberg/jquery-smooth-scroll/3948290d/jquery.smooth-scroll.min.js"></script>
+    <script src="rsvp.js"></script>
+
+    <title>Lina & David</title>
+  </head>
+  <body>
+    <header>
+      <div class="masthead d-flex flex-column text-center justify-content-center align-items-center" id="header">
+        <h1>LINA & DAVID</h1>
+      </div>
+    </header>
+
+    <nav class="navbar navbar-expand-md w-100 bg-light navbar-light sticky-top mb-4">
+      <div class="container d-flex justify-content-end">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse text-center justify-content-center w-100" id="navBar">
+          <ul class="nav navbar-nav flex-nowrap">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link menu-item">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="rsvp.html" class="nav-link menu-item active">RSVP</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="mb-5">
+      <section class="bg-pink">
+        <div class="container p-5">
+          <div class="row">
+            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-center" data-aos="fade-down">
+              <h2 class="mt-4 mb-3" >RSVP</h2>
+              <p id="msg">
+                Please be honest for budgeting purposes!
+              </p>
+              <form class="text-left" id="rsvp">
+                <div class="row mb-3">
+                  <div class="col">
+                    <label for="first-name">First Name*</label>
+                    <input type="first-name" class="form-control" id="first-name" required>
+                  </div>
+                  <div class="col">
+                    <label for="last-name">Last Name*</label>
+                    <input type="last-name" class="form-control" id="last-name" required>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="email">Email address*</label>
+                      <input type="email" class="form-control" id="email" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="rsvp" id="attend-person" value="yes-irl" required>
+                      <label class="form-check-label" for="attend-person">
+                        I will attend in person
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="rsvp" id="attend-virtual" value="yes-virtual" required>
+                      <label class="form-check-label" for="attend-virtual">
+                        I will attend virtually
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="rsvp" id="attend-no" value="no" required>
+                      <label class="form-check-label" for="attend-no">
+                        I cannot attend
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="rsvp" id="attend-idk" value="idk" required>
+                      <label class="form-check-label" for="attend-idk">
+                        I am not sure
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="rsvp" id="attend-other" value="other" required>
+                      <label class="form-check-label" for="attend-other">
+                        Other
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="comments">Any questions, comments, or concerns? (Optional)</label>
+                      <textarea class="form-control" id="comments" rows="3"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col d-flex justify-content-center">
+                    <div class="form-group">
+                      <button type="submit" class="btn btn-primary px-3">Submit</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <hr id="footer-hr">
+
+    <footer class="page-footer py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-fluid text-right">
+
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script>
+      AOS.init({
+        duration: 1800,
+        once: true,
+      });
+    </script>
+  </body>
+</html>
