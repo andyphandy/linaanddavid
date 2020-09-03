@@ -16,7 +16,7 @@
     if (number === "0" && option == "yes-irl") {
       id("comment-error").classList.add("hidden");
       id("number-error").classList.remove("hidden");
-    } else if (option == "yes-irl" && comments.trim() === "") {
+    } else if (option !== "1" && option == "yes-irl" && comments.trim() === "") {
       id("comment-error").classList.remove("hidden");
       id("number-error").classList.add("hidden");
     }
