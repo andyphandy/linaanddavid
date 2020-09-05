@@ -35,6 +35,10 @@ app.get('/rsvp', function(req, res) {
   res.sendFile(__dirname + "/public/rsvp.html");
 });
 
+app.get('/registry', function(req, res) {
+  res.sendFile(__dirname + "/public/registry.html");
+});
+
 app.post("/submitForm", async function(req, res) {
   let { firstName, lastName, email, option, comments, number } = req.body;
   let msg = createMsg(option);
