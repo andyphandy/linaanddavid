@@ -12,9 +12,9 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 app.use(multer().none());
 
-const senderUser = process.env.SENDER_USER;
-const senderPass = process.env.SENDER_PASS;
-const receiverUser = process.env.RECEIVER_USER;
+const SENDER_USER = process.env.SENDER_USER;
+const SENDER_PASS = process.env.SENDER_PASS;
+const RECEIVER_USER = process.env.RECEIVER_USER;
 
 const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
@@ -22,8 +22,8 @@ const transporter = nodemailer.createTransport({
   secure: false,
   requireTLS: true,
   auth: {
-    user: senderUser,
-    pass: senderPass
+    user: SENDER_USER,
+    pass: SENDER_PASS
   }
 })
 
@@ -40,6 +40,8 @@ app.get('/registry', function(req, res) {
 });
 
 app.post("/submitForm", async function(req, res) {
+  //console.log(SENDER_USER);
+  //console.log(SENDER_PASS);
   let { firstName, lastName, email, option, comments, number } = req.body;
   let msg = createMsg(option);
   let subject = `${firstName} ${lastName} ${msg}`;
@@ -49,13 +51,14 @@ app.post("/submitForm", async function(req, res) {
   }
   try {
     let info = await transporter.sendMail({
-      from: senderUser,
-      to: receiverUser,
+      from: SENDER_USER,
+      to: RECEIVER_USER,
       subject: subject,
       text: text
     })
     res.status(200).send(info);
   } catch (err) {
+    console.log(err);
     res.status(500).send(err);
   }
 });
