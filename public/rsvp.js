@@ -61,7 +61,7 @@
   function handleError(msg) {
     id("rsvp").classList.add("hidden");
     let error = id("msg");
-    error.textContent = "Something went wrong. Please try again later.";
+    error.textContent = "Something went wrong. Please contact us at linadavidrsvp@gmail.com that you were unableto RSVP and we will fix this ASAP.";
     error.classList.remove("hidden");
   }
 

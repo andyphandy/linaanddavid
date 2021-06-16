@@ -1,92 +1,302 @@
 <!DOCTYPE html>
+<!--
+  This is the index.html page for Lina and David's website, created by Lina's brother. :)
+  ***
+-->
 <html lang="en">
   <head>
+    <!-- Meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <!-- Dancing Script Font -->
+    <!-- -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Rubik Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="styles.css">
 
+    <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.statically.io/gh/kswedberg/jquery-smooth-scroll/3948290d/jquery.smooth-scroll.min.js"></script>
-
+    <script src="jquery.js"></script>
+    
     <title>Lina & David</title>
   </head>
   <body>
-    <header>
-      <div class="masthead d-flex flex-column text-center justify-content-center align-items-center" id="header">
-        <h1>LINA <span class="gold">&</span> DAVID</h1>
-      </div>
-    </header>
 
-    <nav class="navbar navbar-expand-md w-100 bg-light navbar-light sticky-top mb-4">
-      <div class="container d-flex justify-content-end">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBar">
+    <!-- NAV BAR -->
+    <header>
+      <nav class="navbar navbar-expand-md navbar-light bg-light shadow fixed-top d-flex justify-content-end">
+        <button class="navbar-toggler mr-4" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse text-center justify-content-center w-100" id="navBar">
-          <ul class="nav navbar-nav flex-nowrap">
-            <li class="nav-item">
-              <a href="/" class="nav-link menu-item active">HOME</a>
-            </li>
-            <li class="nav-item">
-              <a href="/rsvp" class="nav-link menu-item">RSVP</a>
-            </li>
-            <li class="nav-item">
-              <a href="/registry" class="nav-link menu-item">REGISTRY</a>
-            </li>
-          </ul>
+        <div class="collapse navbar-collapse" id="navbar">
+          <div class="container d-flex justify-content-center">
+            <div class="navbar-nav text-center">
+              <a class="nav-item nav-link m-2" href="#section-details">Details</a>
+              <a class="nav-item nav-link m-2" href="#section-virtual-viewing">Virtual Viewing</a>
+              <a class="nav-item nav-link m-2" href="#section-getting-there">Getting There</a>
+              <a class="nav-item nav-link m-2" href="#section-accomodation">Accomodation</a>
+              <a class="nav-item nav-link m-2" href="#section-photos">Photos</a>
+              <a class="nav-item nav-link m-2" href="/registry">Registry</a>
+              <a class="nav-item nav-link m-2" href="/rsvp">RSVP</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- MASTHEAD -->
+    <div class="masthead">
+      <div class="container h-100 text-center">
+        <div class="row h-100 align-items-center">
+          <div class="col-12 my-5">
+            <h1 data-aos="fade-down">Lina and David</h1>
+            <p data-aos="fade-down" data-aos-delay="1600">are getting married!</p>
+          </div>
+          <div class="col-12">
+            <p data-aos="fade-down" data-aos-duration="2000" data-aos-delay="2900">Scroll down for more</p>
+            <svg data-aos="fade-down" data-aos-duration="1900" data-aos-delay="3000" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-arrow-down" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+            </svg>
+          </div>
         </div>
       </div>
-    </nav>
+    </div>
 
-    <hr class="gold-hr mb-5">
+    <!-- MAIN IMAGE -->
+    <div class="container my-5">
+      <div class="row">
+        <div class="col-12 d-flex justify-content-center align-items-start" data-aos="fade-down">
+          <img id="main-img" src="assets/proposal.jpg" alt="Proposal on one knee" class="border shadow" id="main-img">
+        </div>
+        <div class="col-12">
+          <hr class="my-5 mb-0">
+        </div>
+      </div>
+    </div>
 
-    <main class="mb-5">
-      <section class="mb-3">
-        <div class="container">
-          <div class="row">
-            <div class="col-fluid text-center mb-5" data-aos="fade-down">
-              <h2 class="mb-3 info">Please join us for our wedding celebration on</h2>
-              <time datetime="2022-02-01">February 19, 2022</time>
+    <!-- DETAILS SECTION -->
+    <section id="section-details">
+      <div class="container text-center mt-5">
+        <div class="row d-flex justify-content-center">
+          <div class="col-12 col-md-6 mt-5 mt-md-0">
+            <div data-aos="fade-down">
+              <img id="where-img" src="assets/location.svg">
+              <h1 class="mt-3 mb-4">Where</h1>
+              <hr>
             </div>
-            <div class="col-fluid mb-5 d-flex justify-content-center align-items-start" data-aos="fade-down">
-              <img src="assets/proposal.jpg" alt="Proposal on one knee" class="border shadow" id="main-img">
+
+            <div class="container my-3" data-aos="fade-down" data-aos-delay="200">
+              <h2>Ceremony</h2>
+              <h3>THE Wedding Chapel</h3>
+              <p>515 S 3rd St C, Las Vegas, NV 89101</p>
+              <p>No personal photography.</p>
+              <a type="button" class="button" href="https://www.google.com/maps/dir//The+Wedding+Chapel,+515+S+3rd+St+C,+Las+Vegas,+NV+89101/@36.1533474,-115.1690129,14z/data=!3m1!5s0x80c8c39e94329349:0x3392d0377f79731a!4m9!4m8!1m0!1m5!1m1!1s0x80c8c37874cb7d4d:0xb7585db0e54d59cd!2m2!1d-115.1463078!2d36.1644669!3e0">
+                See on Map
+              </a>
+            </div>
+
+            <div class="container my-3" data-aos="fade-down" data-aos-delay="400">
+              <h2>Reception</h2>
+              <h3>The M Resort</h3>
+              <p>12300 Las Vegas Blvd S, Henderson, NV 89044</p>
+              <a type="button" class="button" href="https://www.google.com/maps/dir//12300+Las+Vegas+Blvd+S,+Henderson,+NV+89044/@35.9650766,-115.1701688,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x80c8cc143031ec73:0x13ff2ba4496b90be!2m2!1d-115.1679801!2d35.9650723!3e0">
+                See on Map
+              </a>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="mb-5 bg-pink">
-        <div class="container p-5">
-          <div class="row">
-            <div class="col-fluid text-center">
-              <h2 class="mb-3 info">The wedding will take place in</h2>
-              <p id="location">Las Vegas</p>
+
+          <div class="col-12 col-md-6 mt-5 mt-md-0">
+            <div data-aos="fade-down" data-aos-delay="250">
+              <img id="when-img" src="assets/calendar.svg">
+              <h1 class="mt-3 mb-4">When</h1>
+              <hr>
             </div>
-          </div>
+
+            <div data-aos="fade-down" data-aos-delay="450">
+              <div class="container my-3">
+                <p id="date">February 19, 2022</p>
+              </div>
+  
+              <div class="container my-3">
+                <p>Arrive at Ceremony at 1:30 PM. Doors close at 2:00 PM.</p>
+                <p>Tea Ceremony TBD.</p>
+                <p>Reception TBD.</p>
+              </div>            
+  
+              <!-- Button code -->
+              <a type="button" class="button" href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Lina+and+David%27s+Wedding&dates=20220219T133000/20220219T233000&ctz=America/Los_Angeles&details=Celebrating+Lina+and+David%27s+wedding.+Check+out+the+website+for+more+information.&location=Las+Vegas,+NV&pli=1&uid=1623750545addeventcom&sf=true&output=xml">Add to Calendar</a>
+            </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
 
-    <hr class="gold-hr">
-
-    <footer class="page-footer py-5">
+    <!-- VIRTUAL VIEWING SECTION -->
+    <section id="section-virtual-viewing" class="p-5 m-0">
       <div class="container">
         <div class="row">
-          <div class="col-fluid text-right text-muted">
+          <div class="col-12 col-xl-3 offset-xl-1 d-flex justify-content-center align-items-center" data-aos="fade-right">
+            <img id="fair" class="border shadow" src="assets/fair.jpg">
+          </div>
+          <div class="col-10 col-xl-6 offset-1 offset-xl-1 my-4">
 
+            <h1 data-aos="fade-down" data-aos-delay="200">Virtual Viewing</h1>
+            <div data-aos="fade-right" data-aos-delay="300">
+              <hr>
+              <p>Our wedding will be streamed online! TBA for more information.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GETTING THERE SECTION -->
+    <section id="section-getting-there" class="p-5 m-0">
+      <div class="container">
+        <div class="row mb-3">
+          <div class="col text-center" data-aos="fade-down">
+            <h1>Getting There</h1>
+            <hr>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="row" data-aos="fade-down">
+              <h2>Airport (LAS) to the M Resort</h2>
+              <hr>  
+            </div>
+
+            <div class="row" data-aos="fade-down" data-aos-delay="200">
+              <div class="col-12 d-flex justify-content-center my-3">
+                <a type="button" class="button" href="https://www.google.com/maps/dir/McCarran+International+Airport,+5757+Wayne+Newton+Blvd,+Las+Vegas,+NV+89119/The+M+Resort+Spa+Casino,+Las+Vegas+Boulevard+South,+Henderson,+NV/@36.0852909,-115.1544186,15.65z/data=!4m14!4m13!1m5!1m1!1s0x80c8c59f1f049c5d:0x471359241ec41e1e!2m2!1d-115.1537389!2d36.0839998!1m5!1m1!1s0x80c8cc1449fff7e7:0xc04c73959734c863!2m2!1d-115.1679955!2d35.9650822!3e0">
+                  See on Map
+                </a>
+              </div>
+            </div>
+
+            <div class="row" data-aos="fade-down" data-aos-delay="400">
+              <div class="col-10 offset-1">
+                <ol class="list-group list-group-numbered list-group-flush">
+                  <li class="list-group-item">Get on 1-215 W from McCarran Airport (LAS)</li>
+                  <li class="list-group-item">Take exit 12B to merge onto 1-15 S</li>
+                  <li class="list-group-item">On I-15, take exit 27 for St Rose Parkway</li>
+                  <li class="list-group-item">Go straight on St Rose Parkway until destination</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6" data-aos="fade-down" data-aos-delay="100">
+            <div class="row">
+              <h2>M Resort to THE Wedding Chapel</h2>
+              <hr>
+            </div>
+
+            <div class="row" data-aos="fade-down" data-aos-delay="250">
+              <div class="col-12 d-flex justify-content-center my-3">
+                <a type="button" class="button" href="https://www.google.com/maps/dir/M+Resort+Spa+Casino,+12300+Las+Vegas+Blvd+S,+Henderson,+NV+89044/555+S+3rd+St,+Las+Vegas,+NV+89101/@36.0651194,-115.2337437,12z/am=t/data=!4m14!4m13!1m5!1m1!1s0x80c8cc1449fff7e7:0xc04c73959734c863!2m2!1d-115.1679955!2d35.9650822!1m5!1m1!1s0x80c8c39c1ea68549:0x5c733de73ed4d362!2m2!1d-115.146281!2d36.164395!3e0">
+                  See on Map
+                </a>
+              </div>
+            </div>
+
+            <div class="row" data-aos="fade-down" data-aos-delay="450">
+              <div class="col-10 offset-1">
+                <ol class="list-group list-group-numbered list-group-flush">
+                  <li class="list-group-item">Get on 1-15 N from the M Resort</li>
+                  <li class="list-group-item">Go to exit 41 to W Bonneville Ave</li>
+                  <li class="list-group-item">Take W Bonneville Ave to 515 S 3rd St</li>
+                  <li class="list-group-item">(Estimated 25 mins driving time)</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACCOMODATION SECTION -->
+    <section id="section-accomodation" class="p-5 m-0">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-xl-5 mb-4">
+            <h1 data-aos="fade-right">Accomodation</h1>
+            <div data-aos="fade-right" data-aos-delay="200">
+              <hr>
+              <h2 class="mt-1 text-left">The M Resort</h2>
+              <p>We recommend the M Resort. Situated 400 feet above the famous Vegas Strip, 
+                the M Resort offers 390 resort rooms and suites with complimentary transportation to and from the Las Vegas Strip and McCarran Airport. 
+                The four star resort’s modern architecture is fused with upscale contemporary finishes and boasts luxury amenities (gym & hot tub!), 
+                spectacular outdoor terraces and infinity-edge pools.</p>
+  
+              <p>Feeling hungry? Indulge in over 300 items, including a build-your-own taco bar, dim sum, calzones, a vegan station, 
+                desserts created by award-winning pastry chefs and more than a dozen flavors of gelato. 
+                Savor all-you-can-eat seafood and prime rib available every weekend.</p>
+                
+              <p>Looking for a brief escape from the resort? Hop on a shuttle and head down to the Las Vegas Strip, where the night is always young! 
+                We chose Vegas as our destination so that YOU can choose how you want to enjoy your guest experience. 
+                We invite you to come join us for a good time!</p>
+  
+              <p>California & Arizona get 30% discounts. Everywhere else gets 20% discount with call-in code: QPTW22.</p>
+  
+              <a type="button" class="button" href="https://www.themresort.com/">Visit the M Resort here.</a>
+            </div>
+          </div>
+          <div class="col-12 col-xl-7 d-flex justify-content-center align-items-center" data-aos="fade-right" data-aos-delay="300">
+            <img id="m-resort" class="border shadow" src="assets/mresort.jpg">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHOTOS SECTION -->
+    <section id="section-photos">
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <div class="col-12">
+            <h1 data-aos="fade-down">Photos</h1>
+          </div>
+          <div class="col-12 col-md-5 col-lg-4 col-xl-3 m-3 d-flex justify-content-center" data-aos="fade-down" data-aos-delay="200">
+            <img src="assets/photo1.jpg" class="border shadow p-2">
+          </div>
+          <div class="col-12 col-md-5 col-lg-4 col-xl-3 m-3 d-flex justify-content-center"data-aos="fade-down" data-aos-delay="400">
+            <img src="assets/photo2.jpg" class="border shadow p-2">
+          </div>
+          <div class="col-12 col-md-5 col-lg-4 col-xl-3 m-3 d-flex justify-content-center" data-aos="fade-down" data-aos-delay="600">
+            <img src="assets/photo3.jpg" class="border shadow p-2">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="d-flex justify-content-end">
+      <div class="container p-4 m-0">
+        <div class="row m-0">
+          <div class="col-12 text-right">
+            <p>Website will be updated in the future. Will include a schedule and a FAQ section.</p>
           </div>
         </div>
       </div>
     </footer>
 
+
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
+    <!-- AOS Animations Library -->
     <script>
       AOS.init({
         duration: 1800,

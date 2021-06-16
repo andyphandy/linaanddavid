@@ -1,86 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+    <head>
+    <!-- Meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <!-- Dancing Script Font -->
+    <!-- -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Rubik Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="styles.css">
 
+    <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.statically.io/gh/kswedberg/jquery-smooth-scroll/3948290d/jquery.smooth-scroll.min.js"></script>
-    <script src="rsvp.js"></script>
+    <script src="jquery.js"></script>
 
     <title>Lina & David</title>
-  </head>
-  <body>
-    <header>
-      <div class="masthead d-flex flex-column text-center justify-content-center align-items-center" id="header">
-        <h1>LINA <span class="gold">&</span> DAVID</h1>
-      </div>
-    </header>
+      </head>
+      <body>
 
-    <nav class="navbar navbar-expand-md w-100 bg-light navbar-light sticky-top mb-4">
-      <div class="container d-flex justify-content-end">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBar">
+    <!-- NAV BAR -->
+    <header>
+      <nav class="navbar navbar-expand-md navbar-light bg-light shadow fixed-top d-flex justify-content-end">
+        <button class="navbar-toggler mr-4" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse text-center justify-content-center w-100" id="navBar">
-          <ul class="nav navbar-nav flex-nowrap">
-            <li class="nav-item">
-              <a href="/" class="nav-link menu-item">HOME</a>
-            </li>
-            <li class="nav-item">
-              <a href="/rsvp" class="nav-link menu-item">RSVP</a>
-            </li>
-            <li class="nav-item">
-              <a href="/registry" class="nav-link menu-item active">REGISTRY</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <hr class="gold-hr mb-3">
-
-    <main class="mb-3">
-      <section class="bg-pink">
-        <div class="container p-5">
-          <div class="row">
-            <div class="col-6 offset-3 text-center">
-              <h2 class="mb-3">Registry</h2>
-              <p>
-                Hello friends and family,
-              </p>
-              <p>
-                We are honored you will share in our special day. Your presence is our gift!
-              </p>
-              <p>
-                We're lucky to already have a home full of everything we need, so please enjoy browsing our Honeyfund wish list below (click on the image),
-                where you can contribute funds to our dream honeymoon and wedding! Feel free to contact us via leanuhdalina@gmail.com if you have any questions.
-              </p>
-              <p>
-                Thanks for visiting and we can't wait to see you on our big day!
-              </p>
-            </div>
-            <div class="col-fluid">
-              <div style="width:200px;margin:0 auto;"><a href="http://www.honeyfund.com/wedding/phan-thomas-02-19-2022" style="text-align:left;background:url('http://www.honeyfund.com/share/honeyfund3.png') no-repeat;display:block;width:200px;height:100px;text-indent:-9999em;">Visit our honeyfund at Honeyfund.com, the free honeymoon registry</a><p style="margin:0;padding:0;font-size:10px;text-align:center;">Get your <a href="http://www.honeyfund.com/">free honeymoon registry</a></p></div>
+        <div class="collapse navbar-collapse" id="navbar">
+          <div class="container d-flex justify-content-center">
+            <div class="navbar-nav text-center">
+              <a class="nav-item nav-link m-2" href="/">Home</a>
+              <a class="nav-item nav-link m-2" href="">Registry</a>
+              <a class="nav-item nav-link m-2" href="/rsvp">RSVP</a>
             </div>
           </div>
         </div>
-      </section>
-    </main>
+      </nav>
+    </header>
 
-    <hr class="gold-hr">
+    <!-- REGISTRY SECTION -->
+    <section id="section-registry" data-aos="fade-down">
+      <div class="container p-5">
+        <div class="row mb-3" data-aos="fade-down">
+          <div class="col text-center">
+            <h1>Registry</h1>
+            <hr>
+          </div>
+        </div>
 
-    <footer class="page-footer py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-fluid text-right">
+        <div class="row" data-aos="fade-down" data-aos-delay="200">
+          <div class="col-xs-12 col-lg-8 offset-lg-2 text-center">
+            <p>
+              Hello friends and family,
+            </p>
+            <p>
+              We are honored you will share in our special day. Your presence is our gift!
+            </p>
+            <p>
+              We're lucky to already have a home full of everything we need, so please enjoy browsing our Honeyfund wish list below (click on the image),
+              where you can contribute funds to our dream honeymoon and wedding! Feel free to contact us via leanuhdalina@gmail.com if you have any questions.
+            </p>
+            <p>
+              Thanks for visiting and we can't wait to see you on our big day!
+            </p>
+          </div>
+          <div class="col-fluid">
+            <div style="width:200px;margin:0 auto;"><a href="http://www.honeyfund.com/wedding/phan-thomas-02-19-2022" style="text-align:left;background:url('http://www.honeyfund.com/share/honeyfund3.png') no-repeat;display:block;width:200px;height:100px;text-indent:-9999em;">Visit our honeyfund at Honeyfund.com, the free honeymoon registry</a><p style="margin:0;padding:0;font-size:10px;text-align:center;">Get your <a href="http://www.honeyfund.com/">free honeymoon registry</a></p></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- FOOTER -->
+    <footer class="d-flex justify-content-end fixed-bottom">
+      <div class="container p-4 m-0">
+        <div class="row m-0">
+          <div class="col-12 text-right">
+            <p>Website will be updated in the future. Will include a schedule and a FAQ section.</p>
           </div>
         </div>
       </div>
