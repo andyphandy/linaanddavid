@@ -6,12 +6,8 @@
   
 /* General CSS */
 body { 
-  padding-top: 70px; 
+  padding-top: 50px; 
   font-family: 'Rubik', sans-serif;
-}
-
-.full-body {
-  min-height: 100%;
 }
 
 h1 {
@@ -68,7 +64,7 @@ nav a {
 .masthead {
   background-image: linear-gradient(to bottom, #fdb4b4, #FECDCD);
   color: white;
-  height: 80vh;
+  height: 90vh;
 }
 
 .masthead h1 {
