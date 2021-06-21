@@ -17,10 +17,12 @@ const SENDER_PASS = process.env.SENDER_PASS;
 const RECEIVER_USER = process.env.RECEIVER_USER;
 
 const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 587,
-  secure: false,
-  requireTLS: true,
+  host: "smtp-mail.outlook.com", // hostname
+  secureConnection: false, // TLS requires secureConnection to be false
+  port: 587, // port for secure SMTP
+  tls: {
+     ciphers:'SSLv3'
+  },
   auth: {
     user: SENDER_USER,
     pass: SENDER_PASS
