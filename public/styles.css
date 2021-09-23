@@ -211,6 +211,7 @@ nav a {
 }
 
 #section-accomodation .bold {
+  font-size: 20px;
   font-weight: bold;
   color: #D7BE69;
 }
