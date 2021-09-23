@@ -96,6 +96,16 @@ nav a {
   height: auto;
 }
 
+/* Notice CSS */
+#section-notice {
+  background-color: #D7BE69;
+}
+
+#section-notice h1 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 30px;
+}
+
 /* Details CSS */
 #where-img, #when-img {
   width: 40px;
@@ -198,6 +208,11 @@ nav a {
   background: white;
   border: 3px solid white;
   color: #008080;
+}
+
+#section-accomodation .bold {
+  font-weight: bold;
+  color: #D7BE69;
 }
 
 /* Registry CSS */
