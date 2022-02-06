@@ -236,3 +236,18 @@ nav a {
 footer {
   background-color: #434242;
 }
+
+#countdown {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+body[data-aos-delay='3200'] [data-aos],
+[data-aos][data-aos][data-aos-delay='3200'] {
+  transition-delay: 3200ms;
+}
+
+body[data-aos-delay='4200'] [data-aos],
+[data-aos][data-aos][data-aos-delay='4200'] {
+  transition-delay: 4200ms;
+}
